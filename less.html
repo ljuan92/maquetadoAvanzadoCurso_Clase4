@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=3">
 	<title>LESS</title>
 	<link rel="stylesheet" href="css/less.css">
 </head>
@@ -19,12 +20,12 @@
 		</div>
 	</header>
 	<nav>
-		<button id="menu">
+		<button class="col-16 col-sm-12 col-md-8 col-lg-6 col-xl-4" id="menu">
 			<span></span>
 			<span></span>
 			<span></span>
 		</button>
-		<ul class="menu">
+		<ul class="menu col-8">
 			<li class="active"><a href="#">inicio</a></li>
 			<li><a href="#about">acerca de</a></li>
 			<li><a href="#docs">documentacion</a></li>	
@@ -33,15 +34,15 @@
 	</nav>
 	<main>
 		<article>
-			<h1>Preprocesadores</h1>
-			<section>
+			<h1 class="col-16">Preprocesadores</h1>
+			<section class="col-md-8 col-lg-4 col-xl-2">
 				<header>
 					<h1>¿Que es LESS?</h1>
 				</header>
 				<p>Less es un preprocesador css, desarrollado para dotar de dinamismo a las hojas de estilo que realizamos. Se puede utilizar tanto del lado del Cliente mediante las etiquetas de &lt;link&gt; y &lt;script&gt; respectivamente, asi como tambien del lado del servidor con herramientas como <strong>NodeJS.</strong>
 					<br> Facilita al desarrollador la escritura de codigo, permitiendo la anidacion de estilos, asi como tambien permite utilizar los estilos de manera recursiva.</p>
 			</section>
-			<section>
+			<section class="col-md-8 col-lg-4 col-xl-2">
 				<header>
 					<h1>¿Que son los MIXINS?</h1>
 				</header>
@@ -67,7 +68,6 @@
 					pattern="[a-z]{2,50}"
 					title="Debe ingresar su nombre sin numeros ni simbolos y como minimo debe poseer entre 2 a 50 caracteres" 
 					placeholder="Ingrese su Nombre"
-					required 
 					/>
 					<div>Su nombre debe poseer por lo menos 2 caracteres y no debe tener numeros ni simbolos</div>
 			<label for="tel">Telefono:</label>
@@ -82,7 +82,6 @@
 			<input 	type="email" 
 					name="email"  
 					id="email"
-					required
 					multiple 
 					placeholder="Ingrese su Correo" 
 					/>
