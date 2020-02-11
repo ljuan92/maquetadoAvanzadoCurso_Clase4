@@ -10,7 +10,6 @@
 @primary:#018;
 @secondary:#CCC;
 
-
 //Mixins Estatico
 .rounded(@br:50%){
 	-webkit-border-radius:@br;
@@ -94,13 +93,16 @@ main{
 footer{
 	.social-media{}
 	form{
+		.flex;
 		label{
 
 		}
 		input,textarea,select{
-			.rounded(.5rem);
+			.rounded(.25rem);
 			width:85%;
-
+			min-width:@sm/2; 
+			max-width:@xl*3/4;
+			.normalize(.25rem auto;0;.25rem 1rem)
 		}
 	}
 }

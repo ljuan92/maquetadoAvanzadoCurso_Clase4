@@ -1,4 +1,7 @@
 /*comentario CSS*/
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   border: 0;
@@ -70,4 +73,25 @@ body header .social-media a:hover {
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+}
+body footer form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+body footer form input,
+body footer form textarea,
+body footer form select {
+  -webkit-border-radius: 0.25rem;
+  -mzl-webkit-border-radius: 0.25rem;
+  -ms-webkit-border-radius: 0.25rem;
+  -o-webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  width: 85%;
+  min-width: 288px;
+  max-width: 900px;
+  margin: 0.25rem auto;
+  border: 0;
+  padding: 0.25rem 1rem;
 }
