@@ -1,0 +1,107 @@
+//comentario LESS
+/*comentario CSS*/
+
+@sm:576px;
+@md:768px;
+@lg:992px;
+@xl:1200px;
+
+//colores
+@primary:#018;
+@secondary:#CCC;
+
+
+//Mixins Estatico
+.rounded(@br:50%){
+	-webkit-border-radius:@br;
+	-mzl-webkit-border-radius:@br;
+	-ms-webkit-border-radius:@br;
+	-o-webkit-border-radius:@br;
+	border-radius:@br;
+}
+
+//Mixin con parametros
+.flex(@fd:column;@fw:nowrap;@fj:center){
+	display:flex;
+	flex-direction: @fd;
+	flex-wrap: @fw;
+	justify-content: @fj;
+}
+
+.normalize(@m:0;@b:0;@p:0){
+	margin:@m;
+	border:@b;
+	padding:@p;
+}
+
+.padding(@t:.5rem;@r:.5rem;@b:.5rem;@l:.5rem){
+	padding:@t @r @b @l;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	.normalize;
+	@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Slabo+27px&display=swap');
+	font-family: Monserrat, Roboto,sans-serif;
+header{
+	color: @secondary;
+	background-color: @primary;
+	.padding(1rem;.5rem;0;5rem);
+	h1{
+
+	}
+	.social-media{
+		a{
+			.rounded;
+			color:darken(@secondary, 30%);
+			background-color:lighten(@primary,20%);
+			display: inline-block;
+			width:@xl/10*1/4;
+			height:@xl/10*1/4;
+			&:hover{
+				color:darken(@secondary, 60%);
+				background-color:lighten(@primary,40%);
+			}
+		}
+	}
+}
+nav{
+	@media screen and (min-width: @sm){
+		.flex;
+	}
+	@media screen and (min-width: @md){
+		.flex(row;wrap;space-around);
+	}
+	@media screen and (min-width: @lg){
+		.flex(row;nowrap;space-between);
+	}
+	ul{
+		li{
+			a{
+				&:hover{
+
+				}
+			}
+		}
+	}
+}
+main{
+
+}
+footer{
+	.social-media{}
+	form{
+		label{
+
+		}
+		input,textarea,select{
+			.rounded(.5rem);
+			width:85%;
+
+		}
+	}
+}
+}
